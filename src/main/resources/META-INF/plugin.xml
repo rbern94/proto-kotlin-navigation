@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.ryanbern.protonavigation</id>
+    <name>Proto Kotlin Navigation</name>
+    <vendor>Ryan Bern</vendor>
+    <description>
+        Enables Cmd+Click navigation from proto-generated Kotlin code to .proto source definitions.
+        Fills the gap where IntelliJ's Protocol Buffers plugin handles Java but not Kotlin.
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <gotoDeclarationHandler
+                implementation="com.ryanbern.protonavigation.ProtoKotlinNavigationHandler"
+                order="first"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK2="true" supportsK1="true"/>
+    </extensions>
+</idea-plugin>

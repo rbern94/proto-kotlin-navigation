@@ -1,0 +1,17 @@
+# Build output
+build/
+.gradle/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# IntelliJ Platform plugin SDK
+.intellijPlatform/
+
+# Kotlin
+.kotlin/
+
+# OS files
+.DS_Store
